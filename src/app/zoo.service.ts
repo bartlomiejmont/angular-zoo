@@ -6,6 +6,7 @@ import { Observable, lastValueFrom } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+// zooService służy nam do komunikacji z api za pomocą prokokołu HTTP 
 export class ZooService {
 
   constructor(private http: HttpClient) { }
@@ -20,6 +21,7 @@ export class ZooService {
 
 }
 
+// Typ jakiego spodziewamy się z api którego korzystamy
 export interface AnimalResponse {
   name: string; // +
   latin_name: string;

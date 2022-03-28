@@ -1,3 +1,4 @@
+// Component słuący do wyświetlania Zdjęcia i informacji o zwierzęciu
 import { Component, Input, OnInit } from '@angular/core';
 import { FavoriteService } from '../favorite.service';
 import { AnimalResponse } from '../zoo.service';
@@ -8,6 +9,8 @@ import { AnimalResponse } from '../zoo.service';
   styleUrls: ['./animal.component.css']
 })
 export class AnimalComponent implements OnInit {
+  // dane potrzebne do poprawnego wyświetlenia pobieramy z komponenetu znajdującego się wyzej
+  // w hierarchi componentów 
   @Input()
   animal!: AnimalResponse;
 

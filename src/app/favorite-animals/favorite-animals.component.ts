@@ -1,3 +1,4 @@
+// kopia komponentu animal list z róznicą w pobieraniu danych, tu pobieramy dane z innego serwisu 
 import { Component, OnInit } from '@angular/core';
 import { FavoriteService } from '../favorite.service';
 import { AnimalResponse } from '../zoo.service';
@@ -16,6 +17,7 @@ export class FavoriteAnimalsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.refreshFavorites();
   }
 
   refreshFavorites(){

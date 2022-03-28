@@ -1,3 +1,4 @@
+// główny moduł aplikacji znajduje się w nim informacja i powiązania ze wszystkimi elementami aplikacji 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
