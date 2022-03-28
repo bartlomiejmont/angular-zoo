@@ -1,0 +1,4 @@
+<div>
+    <button (click)="refreshFavorites()" >Refresh</button>
+    <app-animal *ngFor="let animal of favoriteAnimals" [animal]="animal"></app-animal>
+</div>

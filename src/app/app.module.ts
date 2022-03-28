@@ -1,16 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AnimalComponent } from './animal/animal.component';
+import { AnimalListComponent } from './animal-list/animal-list.component';
+import { FavoriteAnimalsComponent } from './favorite-animals/favorite-animals.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AnimalComponent,
+    AnimalListComponent,
+    FavoriteAnimalsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot([
+      {path: '', component: AnimalListComponent},
+      {path: 'favorite', component: FavoriteAnimalsComponent},
+    ]),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

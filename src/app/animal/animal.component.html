@@ -1,0 +1,10 @@
+<div class="card">
+    <img class="animalImage" [src]="animal.image_link" alt="Avatar">
+    <div class="container">
+        <h4>{{animal.name}}</h4>
+        <p>{{animal.lifespan}}</p>
+        <p>{{animal.habitat}}</p>
+        <p>{{animal.diet}}</p>
+    </div>
+    <button (click)="addToFavorite(animal)"> Add to favorite </button>
+</div>
